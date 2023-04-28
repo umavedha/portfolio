@@ -1,0 +1,141 @@
+$background-color:red;
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+
+body{
+    margin-left: 60px;
+    margin-right: 60px;
+}
+body {
+    animation: theme 21s linear infinite;
+    
+    &:after,
+    &:before {
+        content: '';
+        display: block;
+        position: fixed;
+        z-index: -1;
+        top: 0;
+        width: 100vw;  // IE/Edge
+        height: 100vh; // fallback
+        width: 100vmax;
+        height: 100vmax;
+        background: rgba(0,0,0,0.05);
+        animation: background 90s linear infinite;
+    }
+
+    &:after {
+        left: 15vw;
+    }
+
+    &:before {
+        right: 15vw;
+        animation-delay: -30s;
+        animation-direction: reverse;
+    }
+}
+
+@keyframes theme {
+    0% {
+        background: #bcf2cf;
+    }
+    
+    16% {
+        background: #c5f2ef;
+    }
+    
+    33% {
+        background: #c0e9ee;
+    }
+    
+    50% {
+        background: #c8e5f1;
+    }
+    
+    66% {
+        background: #f1bac5;
+    }    
+    
+    83% {
+        background: #ec9e93;
+    }
+
+    100% {
+        background: #c1e9cf;
+    }
+}
+
+@keyframes background {
+    0% {
+        transform: rotate(0deg);
+    }
+    
+    100% {
+        transform: rotate(360deg);
+    }
+}
+.listMenu{
+    ul{
+        display: flex;
+        list-style: none;
+       .nav-link{
+        color: #424040;
+       }
+    }
+}
+.navbar{
+    
+    padding-bottom: 0;
+    
+    .navbar-brand{
+        .logo{
+            width: 53px;
+            height: 53px;
+            border-radius: 50%;
+            
+        }
+    }
+}
+
+.intro{
+    height: 92vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .content{
+        .flicker {
+            font-size: 6rem;
+            font-family: "Merienda", sans-serif;
+            margin: 1rem auto;
+            color: rgb(24 23 23 / 59%);
+            background: -webkit-gradient(linear, left top, right top, from(#777373), to(#1d1c1c), color-stop(0.8, #ffffff)) no-repeat;
+            background: gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.8, #fff)) no-repeat;
+            background-size: 110px 100%;
+            -webkit-background-clip: text;
+            background-clip: text;
+            animation: flick 5s infinite;
+        }
+          @keyframes flick {
+            0% {
+              background-position: top left;
+            }
+            100% {
+              background-position: top right;
+            }
+          }
+         
+    }
+    img{
+        width: 500px;
+        height: 500px;
+        border-radius: 50%;
+    }
+}
+
+
+
+
+
+
+
+
